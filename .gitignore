@@ -1,0 +1,9 @@
+/vendor/
+.env
+.htaccess
+assets/img/
+logs
+inner-page.php
+inner-page.html
+admin
+api

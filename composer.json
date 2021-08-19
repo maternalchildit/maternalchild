@@ -1,0 +1,14 @@
+{
+    "name": "hp/medicio",
+    "type": "project",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "peteradeojo",
+            "email": "peteradeojo@outlook.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    }
+}
