@@ -44,7 +44,5 @@ if (isset($_POST)) {
     } else {
       echo_json(['ok' => false, 'error' => 'ReCAPTCHA Verification failed. Please try again later.']);
     }
-
   }
-
 }
