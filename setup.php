@@ -3,11 +3,13 @@
 date_default_timezone_set('Africa/Lagos');
 header("strict-transport-security: max-age=0; includeSubdomains; preload");
 
-function full_require(string $path) {
+function full_require(string $path)
+{
   return require $_SERVER['DOCUMENT_ROOT'] . $path;
 }
 
-function echo_json($obj) {
+function echo_json($obj)
+{
   echo json_encode($obj);
   exit();
 }
