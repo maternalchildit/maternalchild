@@ -83,7 +83,7 @@ global $navbar, $levels;
                 <ul>
                   <li><a class="nav-link scrollto" href="/#gallery">Gallery</a></li>
                   <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-                  <li><a class="nav-link scrollto" href="/doctors.php">Doctors</a></li>
+                  <!--<li><a class="nav-link scrollto" href="/staff.php">Staff</a></li>-->
                   <!--<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
                       <li><a href="#">Deep Drop Down 3</a></li>

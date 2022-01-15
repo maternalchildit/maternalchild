@@ -8,7 +8,7 @@ class Navbar {
     
     if ($links) {
       foreach ($links as $link => $title) {
-        $navText .= "<li><a class='nav-link scrollto' href='#gallery'>Gallery</a></li>";
+        $navText .= "<li><a class='nav-link scrollto' href='$link'>$title</a></li>";
       }
     }
     return <<<_END

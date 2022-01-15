@@ -4,9 +4,9 @@ use Utility\Functions;
 
 require './setup.php';
 
-const TITLE = 'Doctors';
+const TITLE = 'Staff';
 
-$levels = [['title' => 'Doctors']];
+$levels = [['title' => 'Staff']];
 
 $navbar = null;
 Functions::extend('inner-header');
@@ -17,7 +17,7 @@ Functions::extend('inner-header');
   <div class="container my-3">
     <div class="row justify-content-center">
       <?php
-      require 'ops/doctors.php';
+      require 'ops/staff.php';
       ?>
     </div>
   </div>

@@ -4,9 +4,8 @@ require './setup.php';
 use Utility\Functions;
 
 $navbar = null;
+const TITLE = 'Home';
 
-// print_r($navbar);
-// exit();
 Functions::extend('header');
 ?>
 
@@ -653,7 +652,7 @@ Functions::extend('header');
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+234 8033 886 173<br>+234 8103 490 675</p>
+                <p>+234 816 128 7998</p>
               </div>
             </div>
           </div>

@@ -27,9 +27,9 @@ global $scripts, $cdn;
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/#">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/#about">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/#services">Services</a></li>
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="/terms">Terms of service</a></li> -->
             <!-- <li><i class="bx bx-chevron-right"></i> <a href="/privacy">Privacy policy</a></li> -->
           </ul>
