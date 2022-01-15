@@ -102,16 +102,16 @@ Functions::extend('header');
     </section>End Featured Services Section -->
 
   <!-- ======= Cta Section ======= -->
-  <section id="cta" class="cta">
+  <!-- <section id="cta" class="cta">
     <div class="container" data-aos="zoom-in">
 
-      <!-- <div class="text-center">
+      <div class="text-center">
         <h3>In an emergency? Need help now?</h3>
         <a class="cta-btn scrollto" href="#appointment">Book an Appointment</a>
-      </div> -->
+      </div>
 
     </div>
-  </section><!-- End Cta Section -->
+  </section>End Cta Section -->
 
   <!-- ======= About Us Section ======= -->
   <section id="about" class="about">
