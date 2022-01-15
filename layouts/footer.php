@@ -19,7 +19,7 @@ global $scripts, $cdn;
             </p>
             <div class="social-links mt-3">
               <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-              <a href="//web.facebook.com" class="facebook" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook"></i></a>
+              <!-- <a href="//web.facebook.com" class="facebook" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook"></i></a> -->
             </div>
           </div>
         </div>
