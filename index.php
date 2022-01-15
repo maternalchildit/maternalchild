@@ -105,10 +105,10 @@ Functions::extend('header');
   <section id="cta" class="cta">
     <div class="container" data-aos="zoom-in">
 
-      <div class="text-center">
+      <!-- <div class="text-center">
         <h3>In an emergency? Need help now?</h3>
         <a class="cta-btn scrollto" href="#appointment">Book an Appointment</a>
-      </div>
+      </div> -->
 
     </div>
   </section><!-- End Cta Section -->
