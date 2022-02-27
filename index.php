@@ -637,7 +637,7 @@ Functions::extend('header');
               <div class="info-box">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>Behind Immigration Office, ABUAD/Federal Polytechnic Road, Ado-Ekiti, Ekiti State, Nigeria</p>
+                <p>Behind Immigration Office, Off ABUAD/Federal Polytechnic Road, Ado-Ekiti, Ekiti State, Nigeria</p>
                 <p>Beside SLOT, Oppposite BOVAS Filling Station, Along EKSU Road, Adebayo, Ado-Ekiti, Ekiti State, Nigeria</p>
               </div>
             </div>

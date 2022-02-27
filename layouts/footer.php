@@ -35,14 +35,14 @@ global $scripts, $cdn;
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-6 footer-newsletter">
+        <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
           <h4>Our Newsletter</h4>
           <p>Subscribe to our monthly newsletter to get notified about our upcoming activities, events or outreaches.</p>
           <form action="/forms/newsletter.php" method="post" id="subscribeForm">
             <input type="email" name="email" required><input type="submit" value="Subscribe">
           </form>
 
-        </div>
+        </div> -->
 
       </div>
     </div>

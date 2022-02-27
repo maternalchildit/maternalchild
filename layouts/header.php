@@ -12,7 +12,7 @@ global $navbar, $cdn;
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Maternal-Child Specialists' Clinics</title>
-  <meta content="Maternal-Child Specialists’ Clinics is a rapidly growing hospital in Ado-Ekiti, the capital city of Ekiti State, Southwest Nigeria with special interest in Comprehensive Maternity Care, Fetomaternal Medicine, Minimal Access Surgery, Advanced Fertility Management and General Gynaecology. We also offer specialised care in Paediatrics, Internal Medicine, General Surgery, Orthopaedics, Urology, Ophthalmology, Oral and Maxillofacial Surgery, Dental Surgery, Ear, Nose and Throat (ENT) Surgery, Laboratory Medicine, Pharmacy and other relevant fields of Medicine and Surgery." name="description">
+  <meta content="Maternal-Child Specialists' Clinics is a rapidly growing hospital in Ado-Ekiti, the capital city of Ekiti State, Southwest Nigeria with special interest in Comprehensive Maternity Care, Fetomaternal Medicine, Minimal Access Surgery, Advanced Fertility Management and General Gynaecology. We also offer specialised care in Paediatrics, Internal Medicine, General Surgery, Orthopaedics, Urology, Ophthalmology, Oral and Maxillofacial Surgery, Dental Surgery, Ear, Nose and Throat (ENT) Surgery, Laboratory Medicine, Pharmacy and other relevant fields of Medicine and Surgery." name="description">
   <meta content="antenatal care, pregnancy, hospitals in ado-ekiti, hospitals in ekiti, hospitals in nigeria, top hospitals in nigeria, nhis, health insurance" name="keywords">
 
   <!-- Favicons -->
@@ -59,10 +59,10 @@ global $navbar, $cdn;
       <div class="align-items-center d-none d-md-flex">
         <i class="bi bi-clock"></i> Mon - Sun, 8AM to 10PM
       </div>
-      <!-- <div class="d-flex align-items-center">
-        <a href="/covid-19.php" class="text-white text-decoration-underline">Read about our responses to COVID-19 in our communitites</a>
-      </div> -->
       <div class="d-flex align-items-center">
+        <a href="/covid-19.php" class="text-white text-decoration-underline">Read about our responses to COVID-19 in our communitites</a>
+      </div>
+      <div class="align-items-center d-none d-md-flex">
         <i class="bi bi-phone"></i> Call us now +234 810 349 0675
       </div>
     </div>
