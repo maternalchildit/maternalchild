@@ -2,6 +2,8 @@
 
 namespace Database;
 
+use Exception;
+
 class Database {
   private $dbname;
   private $dbhost;
@@ -33,17 +35,19 @@ class Database {
     if ($this->connected === true) {
       return true;
     }
-    $cxn = @mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword);
+    $cxn = mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword);
+    $this->cxn = $cxn;
     if ($cxn) {
-      $dbcxn = @mysqli_select_db($cxn, $this->dbname);
+      $dbcxn = mysqli_select_db($this->cxn, $this->dbname);
       if ($dbcxn) {
-        $this->cxn = $cxn;
+        // $this->cxn = $cxn;
         $this->connected = true;
       } else {
         $this->connected = false;
       }
     } else {
       $this->connected = false;
+      // throw new Exception(mysqli_error($cxn));
     }
     unset($cxn);
     return $this->connected;
