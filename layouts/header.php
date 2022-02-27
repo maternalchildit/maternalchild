@@ -59,10 +59,10 @@ global $navbar, $cdn;
       <div class="align-items-center d-none d-md-flex">
         <i class="bi bi-clock"></i> Mon - Sun, 8AM to 10PM
       </div>
-      <div class="d-flex align-items-center">
+      <div class="d-none d-md-flex align-items-center">
         <a href="/covid-19.php" class="text-white text-decoration-underline">Read about our responses to COVID-19 in our communitites</a>
       </div>
-      <div class="align-items-center d-none d-md-flex">
+      <div class="align-items-center d-flex">
         <i class="bi bi-phone"></i> Call us now +234 810 349 0675
       </div>
     </div>
@@ -70,39 +70,5 @@ global $navbar, $cdn;
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <a href="/" class="logo me-auto"><img src="/assets/img/maternal-and-child.png" alt="Hospital Logo"></a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
-
-      <?php
-      if (!$navbar) {
-        echo <<<_END
-            <nav id="navbar" class="navbar order-last order-lg-0">
-              <ul>
-                <li><a class="nav-link scrollto " href="/#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="/#about">About</a></li>
-                <li><a class="nav-link scrollto" href="/#services">Services</a></li>
-                <!-- <li><a class="nav-link scrollto" href="#departments">Departments</a></li> -->
-                <!-- <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li> -->
-                <li class="dropdown">
-                  <a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
-                  <ul>
-                    <li><a class="nav-link scrollto" href="/#gallery">Gallery</a></li>
-                    <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-                    <!--<li><a class="nav-link scrollto" href="/staff.php">Staff</a></li>-->
-                  </ul>
-                </li>
-              </ul>
-              <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-            <!-- .navbar -->
-            <a href="/#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Book an</span> Appointment</a>
-        _END;
-      } else {
-        echo Navbar::createNavbar($navbar);
-      }
-      ?>
-    </div>
+    <?php require 'nav.php' ?>
   </header><!-- End Header -->
