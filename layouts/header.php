@@ -59,9 +59,9 @@ global $navbar, $cdn;
       <div class="align-items-center d-none d-md-flex">
         <i class="bi bi-clock"></i> Mon - Sun, 8AM to 10PM
       </div>
-      <div class="d-none d-md-flex align-items-center">
+      <!-- <div class="d-none d-md-flex align-items-center">
         <a href="/covid-19.php" class="text-white text-decoration-underline">Read about our responses to COVID-19 in our communitites</a>
-      </div>
+      </div> -->
       <div class="align-items-center d-flex">
         <i class="bi bi-phone"></i> Call us now +234 810 349 0675
       </div>

@@ -25,9 +25,9 @@ use Utility\Navbar;
                 <ul>
                   <li><a class="nav-link scrollto" href="/#gallery">Gallery</a></li>
                   <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-                  <li class='d-md-none'><a class="nav-link scrollto" href="/covid-19.php">COVID-19 Response</a></li>
-                  <!--<li><a class="nav-link scrollto" href="/staff.php">Staff</a></li>-->
-                  <!--<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                  <!--<li class='d-md-none'><a class="nav-link scrollto" href="/covid-19.php">COVID-19 Response</a></li>
+                  <li><a class="nav-link scrollto" href="/staff.php">Staff</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
                       <li><a href="#">Deep Drop Down 3</a></li>
                       <li><a href="#">Deep Drop Down 4</a></li>
