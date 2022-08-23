@@ -604,7 +604,7 @@ Functions::extend('header');
 
     <div class="mapouter">
       <div class="gmap_canvas">
-        <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Maternal-Child&20Specialists'&20Clinics&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=7.6078549326575455,5.2524625823370386&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <br>
         <style>
           .mapouter {
