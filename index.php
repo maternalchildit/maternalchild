@@ -604,8 +604,7 @@ Functions::extend('header');
 
     <div class="mapouter">
       <div class="gmap_canvas">
-        <iframe width="100%" height="350px" style="border:0" id="gmap_canvas" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDCABU-yFcGiSJOJAzvZFr16SZ0rAh85iA&q=Maternal-Child%20Specialist's%20Clinics,%20Ado%20Ekiti" marginheight="0" margin-width="0">
-        </iframe>
+        <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Maternal-Child&20Specialists'&20Clinics&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <br>
         <style>
           .mapouter {
