@@ -1,17 +1,6 @@
 <?php
 header("strict-transport-security: max-age=0; includeSubdomains; preload");
 
-function full_require(string $path)
-{
-  return require $_SERVER['DOCUMENT_ROOT'] . $path;
-}
-
-function echo_json($obj)
-{
-  echo json_encode($obj);
-  exit();
-}
-
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 full_require('/autoload.php');
@@ -39,3 +28,19 @@ if ($_ENV['CDN'] === '1') {
 }
 
 $database_connection = $db->connect();
+
+function full_require(string $path)
+{
+  return require $_SERVER['DOCUMENT_ROOT'] . $path;
+}
+
+function echo_json($obj)
+{
+  echo json_encode($obj);
+  exit();
+}
+
+function env($key, $default = null) {
+  // die($_ENV[$key] ??$default);
+  return $_ENV[$key] ?? $default;
+}

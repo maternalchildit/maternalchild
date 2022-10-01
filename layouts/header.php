@@ -63,7 +63,7 @@ global $navbar, $cdn;
         <a href="/covid-19.php" class="text-white text-decoration-underline">Read about our responses to COVID-19 in our communitites</a>
       </div> -->
       <div class="align-items-center d-flex">
-        <i class="bi bi-phone"></i> Call us now &nbsp;<a href="tel:+2348167666638" style="color: inherit"> +234 816 7666 638</a>
+        <i class="bi bi-phone"></i> Call us now &nbsp;<a href="tel:<?= env('CONTACT_TEL', "+234 816 7666 638") ?>" style="color: inherit"> <?= env('CONTACT_TEL', "+234 816 7666 638"); ?></a>
       </div>
     </div>
   </div>
