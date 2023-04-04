@@ -14,7 +14,7 @@ global $scripts, $cdn;
             <p>
               Behind Immigration Office,<br /> Off ABUAD/Poly Road,<br>
               Ado-Ekiti, Ekiti State, Nigeria<br><br>
-              <strong>Phone:</strong> +234 816 128 7998<br>
+              <strong>Phone:</strong> <?=env('CONTACT_TEL', "+234 816 7666 638")?><br>
               <strong>Email:</strong> <a href="mailto:maternalchild@gmail.com" class="text-dark-">maternalchild2008@gmail.com</a><br>
             </p>
             <div class="social-links mt-3">

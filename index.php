@@ -651,7 +651,7 @@ Functions::extend('header');
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+234 816 128 7998</p>
+                <p><?= env('CONTACT_TEL', "+234 816 7666 638") ?></p>
               </div>
             </div>
           </div>
