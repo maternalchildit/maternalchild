@@ -23,15 +23,13 @@ if (env('MAINTENANCE_MODE', '1') === '1') {
   exit();
 }
 
-$db = new Database();
+// $db = new Database();
 $logger = new Logger;
 
 $cdn = false;
 if (env('CDN', '1') === '1') {
   $cdn = true;
 }
-
-$database_connection = $db->connect();
 
 function full_require(string $path)
 {
