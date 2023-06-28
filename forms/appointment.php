@@ -5,6 +5,8 @@ use Validator\Validator;
 
 $validator = new Validator;
 
+echo_json(['ok' => true,]);
+
 if (!$database_connection) {
   $logger->log($db->getError(), 'database');
   echo_json(['ok' => false, 'error' => 'An error occured. Please try again later']);
