@@ -10,11 +10,15 @@ use Database\Database;
 use Dotenv\Dotenv;
 use Logger\Logger;
 
+function env($key, $default = null) {
+  // die($_ENV[$key] ??$default);
+  return $_ENV[$key] ?? $default;
+}
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
-if ($_ENV['MAINTENANCE_MODE'] === '1') {
+if (env('MAINTENANCE_MODE', '1') === '1') {
   echo "Sorry, this site is under maintenance. Try again later.";
   exit();
 }
@@ -23,7 +27,7 @@ $db = new Database();
 $logger = new Logger;
 
 $cdn = false;
-if ($_ENV['CDN'] === '1') {
+if (env('CDN', '1') === '1') {
   $cdn = true;
 }
 
@@ -38,9 +42,4 @@ function echo_json($obj)
 {
   echo json_encode($obj);
   exit();
-}
-
-function env($key, $default = null) {
-  // die($_ENV[$key] ??$default);
-  return $_ENV[$key] ?? $default;
 }
