@@ -13,10 +13,10 @@ class Database {
   private $cxn = null;
 
   function __construct() {
-    $this->dbname = $_ENV['DATABASE_NAME'];
-    $this->dbhost = $_ENV['DATABASE_HOST'];
-    $this->dbuser = $_ENV['DATABASE_USER'];
-    $this->dbpassword = $_ENV['DATABASE_PASSWORD'];
+    $this->dbname = env('DATABASE_NAME');
+    $this->dbhost = env('DATABASE_HOST');
+    $this->dbuser = env('DATABASE_USER');
+    $this->dbpassword = env('DATABASE_PASSWORD');
   }
 
   private function tableExists(string $table) {
@@ -35,7 +35,7 @@ class Database {
     if ($this->connected === true) {
       return true;
     }
-    $cxn = mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword);
+    $cxn = \mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword);
     $this->cxn = $cxn;
     if ($cxn) {
       $dbcxn = mysqli_select_db($this->cxn, $this->dbname);

@@ -3,12 +3,12 @@ header("strict-transport-security: max-age=0; includeSubdomains; preload");
 
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 
-full_require('/autoload.php');
-full_require('/vendor/autoload.php');
-
 use Database\Database;
 use Dotenv\Dotenv;
 use Logger\Logger;
+
+full_require('/autoload.php');
+full_require('/vendor/autoload.php');
 
 function env($key, $default = null) {
   // die($_ENV[$key] ??$default);
@@ -18,7 +18,7 @@ function env($key, $default = null) {
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
-if (env('MAINTENANCE_MODE', '1') === '1') {
+if (env('MAINTENANCE_MODE') === '1') {
   echo "Sorry, this site is under maintenance. Try again later.";
   exit();
 }
@@ -27,7 +27,7 @@ if (env('MAINTENANCE_MODE', '1') === '1') {
 $logger = new Logger;
 
 $cdn = false;
-if (env('CDN', '1') === '1') {
+if (env('CDN') === '1') {
   $cdn = true;
 }
 
