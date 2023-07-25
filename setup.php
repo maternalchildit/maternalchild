@@ -23,7 +23,7 @@ if (env('MAINTENANCE_MODE') === '1') {
   exit();
 }
 
-// $db = new Database();
+$db = new Database();
 $logger = new Logger;
 
 $cdn = false;
