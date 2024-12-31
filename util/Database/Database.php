@@ -65,7 +65,7 @@ class Database {
     return true;
   }
 
-  function select(string $table, string $rows = null, string $where = null, int $limit = null) {
+  function select(string $table, string $rows = null, string $where = null, int $limit = null, int $skip = 0) {
     if ($this->tableExists($table)) {
       if (!$rows) {
         $rows = "*";
@@ -77,6 +77,7 @@ class Database {
       if ($limit) {
         $sql .= "LIMIT $limit";
       }
+      if ($skip) $sql .= " OFFSET $skip ";
 
       $query = @mysqli_query($this->cxn, $sql);
       if ($query) {
@@ -93,6 +94,8 @@ class Database {
           return [];
         }
       }
+    } else {
+      throw new Exception("Table $table does not exist");
     }
   }
 

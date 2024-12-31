@@ -1,5 +1,8 @@
 <?php
-if ($database_connection) {
+global $db;
+
+if ($db) {
+  $db->connect();
   $staff = $db->select('staff_details', null, "delete_status=0");
   if ($staff) {
     foreach ($staff as $person) {

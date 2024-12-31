@@ -2,7 +2,7 @@
 
 use Utility\Navbar;
 
-global $navbar, $cdn;
+global $navbar, $cdn, $styles;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +49,13 @@ global $navbar, $cdn;
   <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <link href="/assets/css/style.css" rel="stylesheet">
+
+  <?php
+  foreach ((@$styles ?? []) as $style) {
+    # code...
+      echo "<link href='/assets/css/{$style}.css' rel='stylesheet'>\n";
+  }
+  ?>
 </head>
 
 <body>

@@ -19,4 +19,10 @@ class Functions
     $file = str_replace('\\', DIRECTORY_SEPARATOR, Functions::give_root() . $path);
     require $file;
   }
+
+  static function echo_json($obj)
+  {
+    echo json_encode($obj);
+    exit();
+  }
 }

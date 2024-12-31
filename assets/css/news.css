@@ -1,0 +1,22 @@
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.list.divided li {
+	border-bottom: 1px solid;
+}
+.list.divided li:last-of-type {
+	border-bottom: none;
+}
+
+.list p {
+    margin: 0;
+    padding: 0;
+}
+
+.article-link {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 5px;
+}
