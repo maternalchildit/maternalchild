@@ -4,18 +4,7 @@ use Validator\Validator;
 
 require '../setup.php';
 
-// if (!$db->connect()) {
-//   $logger->error('Database connection error', 'database');
-//   echo_json(['error' => 'An error occurred. Please try again later.', 'ok' => false]);
-// }
-
-try {
-  $db->connect();
-} catch (\Throwable $th) {
-  $logger->error($th, 'error');
-  echo_json(['error' => 'An error occurred. Please try again later.', 'ok' => false]);
-}
-
+$db->connect();
 $validator = new Validator;
 
 if (isset($_POST)) {
