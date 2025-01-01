@@ -35,7 +35,7 @@ class Validator
       }
     }
 
-    if (preg_match($this->namePattern, $name)) {
+    if (preg_match(self::$namePattern, $name)) {
       return $name;
     }
     return false;

@@ -392,12 +392,13 @@ function onSubmit(e, token) {
 						} else {
 							createAlert('There seems to be a problem delivering your message. Please try again later.');
 						}
+						thisForm.reset();
 					} catch (err) {
 						console.error(err);
 						createAlert('An error occurred');
+					} finally {
+						thisForm.querySelector("button[type='submit']").disabled = false;
 					}
-					thisForm.reset();
-					thisForm.querySelector("button[type='submit']").disabled = false;
 				})();
 			});
 		}
