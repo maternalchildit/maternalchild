@@ -2,33 +2,32 @@
 
 namespace Validator;
 
-class Validator {
-  private $namePattern;
-  private $emailPattern;
-  private $phonePattern;
+class Validator
+{
+  private static $namePattern = "/^[a-zA-Z' -]{3,}$/";
+  private static $emailPattern = "/^.+@+.+\..+$/";
+  private static $phonePattern = "/
+  ((\d{1}) | \+(\d{1,}))
+  (\s)?
+  (\(?(\d{3})\)?)
+  (\s)?
+  ((\d{3,4}))
+  (\s)?
+  -?
+  ((\d{3,4}))?
+/x";
 
-  function __construct() {
-    $this->namePattern = "/^[a-zA-Z' -]{3,}$/";
-    $this->emailPattern = "/^.+@+.+\..+$/";
-    $this->phonePattern = "/
-      ((\d{1}) | \+(\d{1,}))
-      (\s)?
-      (\(?(\d{3})\)?)
-      (\s)?
-      ((\d{3,4}))
-      (\s)?
-      -?
-      ((\d{3,4}))?
-    /x";
-  }
+  function __construct() {}
 
-  private function prepareString(string $string): string {
+  public static function prepareString(string $string): string
+  {
     $string = trim(strip_tags(stripslashes(htmlspecialchars($string))));
     return $string;
   }
 
-  function validateName(string $name, bool $empty = false) {
-    $name = $this->prepareString($name);
+  function validateName(string $name, bool $empty = false)
+  {
+    $name = self::prepareString($name);
 
     if ($empty) {
       if (empty($name)) {
@@ -42,8 +41,9 @@ class Validator {
     return false;
   }
 
-  function validateEmail(string $email, bool $empty = false) {
-    $email = $this->prepareString($email);
+  function validateEmail(string $email, bool $empty = false)
+  {
+    $email = self::prepareString($email);
 
     if ($empty) {
       if (empty($email)) {
@@ -51,24 +51,26 @@ class Validator {
       }
     }
 
-    if (preg_match($this->emailPattern, $email)) {
+    if (preg_match(self::$emailPattern, $email)) {
       return $email;
     }
     return false;
   }
 
-  function validateLongText(string $text, bool $empty = false) {
+  function validateLongText(string $text, bool $empty = false)
+  {
     if ($empty) {
       if (empty($text)) {
         return $text;
       }
     }
-    $text = Validator::prepareString($text);
+    $text = self::prepareString($text);
     return $text;
   }
 
-  function validateShortText(string $text, bool $empty = false) {
-    $text = $this->prepareString($text);
+  function validateShortText(string $text, bool $empty = false)
+  {
+    $text = self::prepareString($text);
 
     if ($empty) {
       if (empty($text)) {
@@ -82,7 +84,8 @@ class Validator {
     return false;
   }
 
-  function validateFile($file, float $megabytes = null) {
+  function validateFile($file, float $megabytes = null)
+  {
     $filename = $file['name'];
     $allowed_extensions = ['jpg', 'png', 'jpeg'];
     $ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -99,20 +102,30 @@ class Validator {
     return false;
   }
 
-  function validatePhoneNumber(string $number, bool $empty = false) {
-    $number = $this->prepareString($number);
+  function validatePhoneNumber(string $number)
+  {
+    $number = self::prepareString($number);
     $number = preg_replace("/\s/", "", $number);
-    if (preg_match($this->phonePattern, $number)) {
+    if (preg_match(static::$phonePattern, $number)) {
       return $number;
     }
     return false;
   }
 
-  static function nullString(string $string) {
+  function validateInteger(?string $num)
+  {
+    if (!$num) return;
+    $num = self::prepareString($num);
+    if (preg_match("/^\d+$/", $num)) {
+      return $num;
+    }
+  }
+
+  static function nullString(string $string)
+  {
     if (empty($string)) {
       return null;
     }
     return $string;
   }
-
 }

@@ -3,13 +3,19 @@
 require('./setup.php');
 
 use Utility\Functions;
+use Validator\Validator;
 
 global $db;
 
-
 $db->connect();
-$id = @$_GET['id'];
+
+$validator = new Validator();
+
 $showing_article = false;
+
+$id = @$_GET['id'];
+$id = $validator->validateInteger($id);
+
 if ($id) {
     $article = @$db->select("news_articles", null, "id = $id")[0];
     if (!$article) {

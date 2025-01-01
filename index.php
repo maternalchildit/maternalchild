@@ -59,60 +59,6 @@ Functions::extend('header');
 
 <main id="main">
 
-  <!-- ======= Featured Services Section ======= -->
-  <!-- <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="fas fa-pills"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="fas fa-thermometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Featured Services Section -->
-
-  <!-- ======= Cta Section ======= -->
-  <!-- <section id="cta" class="cta">
-    <div class="container" data-aos="zoom-in">
-
-      <div class="text-center">
-        <h3>In an emergency? Need help now?</h3>
-        <a class="cta-btn scrollto" href="#appointment">Book an Appointment</a>
-      </div>
-
-    </div>
-  </section>End Cta Section -->
-
   <!-- ======= About Us Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
@@ -144,53 +90,6 @@ Functions::extend('header');
 
     </div>
   </section><!-- End About Us Section -->
-
-  <!-- ======= Counts Section ======= -->
-  <!-- <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-user-md"></i>
-              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
-
-              <p><strong>Doctors</strong></p>
-              <a href="/doctors.php">Find out more &raquo;</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="far fa-hospital"></i>
-              <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Departments</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-flask"></i>
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Health Maintenance Organizations</strong></p>
-              <a href="/insurance.php">Find out more &raquo;</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Awards</strong></p>
-              <a href="#">Find out more &raquo;</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Counts Section -->
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services services">
@@ -312,35 +211,13 @@ Functions::extend('header');
             <input type="date" name="date" class="form-control datepicker" id="app_date" placeholder="Appointment Date" min="<?= date('Y-m-d') ?>">
           </div>
 
-          <!-- <div class="col-md-4 form-group mt-3">
-              <select name="department" id="app_department" class="form-select">
-                <option value="">Select Department</option>
-                <?php
-                // $departments = $db->select('departments', 'name');
-                // if ($departments) {
-                //   foreach ($departments as $department) {
-                //     # code...
-                //     echo "<option value='{$department['name']}'>{$department['name']}</option>";
-                //   }
-                // }
-                ?>
-              </select>
-            </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="app_doctor" class="form-select">
-                <option value="">Select Doctor</option>
-                <option value="Doctor 1">Doctor 1</option>
-                <option value="Doctor 2">Doctor 2</option>
-                <option value="Doctor 3">Doctor 3</option>
-              </select>
-            </div> -->
         </div>
 
         <div class="form-group mt-3">
           <textarea class="form-control" name="message" id="app_message" rows="5" placeholder="Message (Optional)"></textarea>
         </div>
         <div class="my-3">
-          <div class="g-recaptcha" data-sitekey="<?= $_ENV['RECAPTCHA_SITE_KEY'] ?>"></div>
+          <div class="g-recaptcha" data-sitekey="<?= env('RECAPTCHA_SITE_KEY', '') ?>"></div>
           <div class="loading">Loading</div>
           <div class="error-message"></div>
           <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
@@ -350,173 +227,6 @@ Functions::extend('header');
 
     </div>
   </section><!-- End Appointment Section -->
-
-  <!-- ======= Departments Section ======= -->
-  <!-- <section id="departments" class="departments">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Departments</h2>
-          <p>We engage different departments to ensure efficient delivery of our services to our clients</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                  <h4>Cardiology</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                  <h4>Radiology</h4>
-                  <p>Voluptas vel esse repudiandae quo excepturi.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                  <h4>Hematology</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                  <h4>Pediatrics</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
-                  <h4>Gynecology</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-8">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <h3>Cardiology</h3>
-                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                <img src="/assets/img/departments-1.jpg" alt="" class="img-fluid">
-                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <h3>Radiology</h3>
-                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                <img src="/assets/img/departments-2.jpg" alt="" class="img-fluid">
-                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <h3>Hematology</h3>
-                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                <img src="/assets/img/IMG_20210503_144818_304.jpg" alt="" class="img-fluid">
-                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <h3>Pediatrics</h3>
-                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                <img src="/assets/img/departments-4.jpg" alt="" class="img-fluid">
-                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-              </div>
-              <div class="tab-pane" id="tab-5">
-                <h3>Gynecology</h3>
-                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                <img src="/assets/img/ante-natal-img.jpg" alt="" class="img-fluid">
-                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>End Departments Section -->
-
-  <!-- ======= Testimonials Section ======= -->
-  <!-- <section id="testimonials" class="testimonials">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Testimonials</h2>
-        <p>Dont' take our word for it. Listen to clients who have something to say about us.</p>
-      </div>
-
-      <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-          <?php
-          ## load testimonials
-          include_once './ops/testimonials.php';
-          ?>
-        </div>
-        <div class="swiper-pagination"></div>
-
-        <div class="testimonial-item mt-3">
-          <p>
-            <i>Tell us about your experience with us.</i>
-          <form action="/forms/testimonial.php" method="post" enctype="multipart/form-data" id="testimonial-form">
-            <div class="row">
-              <div class="form-group col-sm-6">
-                <label for="witness">Name</label>
-                <input type="text" name="witness" id="witness" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="form-group mt-3 mt-sm-0 col-sm-6">
-                <label for="description">Description</label>
-                <input type="text" name="description" id="description" class="form-control" placeholder="occupation, relationship to the facility, etc. optional">
-              </div>
-              <div class="form-group mt-3 col-12">
-                <label for="testimonial">Testimonial</label>
-                <textarea name="testimonial" id="testimonial" class="form-control" placeholder="Your experience" required></textarea>
-              </div>
-              <div class="form-group mt-3 col-sm-8">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <label for="witnesspic">Display Picture</label>
-                    <input type="file" name="witnesspic" id="witnesspic" required="required" class="form-control" accept=".jpg, .png">
-                  </div>
-                  <div class="mt-3 col-sm-4">
-                    <img src="" id="testpic" style="height: 120px; border-radius: 50%;display: none">
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 mt-3">
-                <div class="form-group">
-                  <label for="email">E-mail Address</label>
-                  <input type="email" name="email" id="testimonial-email" class="form-control">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <button type="submit" class="btn btn-success">Submit</button>
-              </div>
-            </div>
-          </form>
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section> -->
-  <!-- End Testimonials Section -->
-
-  <!-- ======= Doctors Section ======= -->
-  <!-- <section id="doctors" class="doctors section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Doctors</h2>
-        <p>Meet our team of amazing and dedicated frontliners.</p>
-      </div>
-
-      <div class="row justify-content-center">
-        <?php
-        // require_once './ops/doctors.php';
-        ?>
-      </div>
-
-    </div>
-  </section> -->
-  <!-- ====== End Doctors Section ====== -->
 
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">
@@ -540,7 +250,7 @@ Functions::extend('header');
     </div>
   </section><!-- End Gallery Section -->
 
-  <!-- ======= Frequently Asked Questioins Section ======= -->
+  <!-- ======= Frequently Asked Questions Section ======= -->
   <section id="faq" class="faq section-bg">
     <div class="container" data-aos="fade-up">
 

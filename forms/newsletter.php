@@ -17,7 +17,7 @@ if (isset($_POST)) {
     if ($db->insertOne('newsletter', ['email' => $email, 'datetime' => date('Y-m-d H:i:s')])) {
       echo_json(['ok' => true]);
     } else {
-      $logger->log($db->getError(), 'database');
+      // $logger->log($db->getError(), 'database');
       echo_json(['error' => 'An error occured. Please try again later']);
     }
   }

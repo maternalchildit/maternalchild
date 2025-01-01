@@ -10,7 +10,8 @@ use Logger\Logger;
 full_require('/autoload.php');
 full_require('/vendor/autoload.php');
 
-function env($key, $default = null) {
+function env($key, $default = null)
+{
   // die($_ENV[$key] ??$default);
   return $_ENV[$key] ?? $default;
 }
@@ -24,6 +25,9 @@ if (env('MAINTENANCE_MODE') === '1') {
 }
 
 $db = new Database();
+
+global $db;
+
 $logger = new Logger;
 
 $cdn = false;
@@ -41,3 +45,26 @@ function echo_json($obj)
   echo json_encode($obj);
   exit();
 }
+
+function dump($var)
+{
+  return (echo_json($var));
+}
+function dd($var)
+{
+  die(echo_json($var));
+}
+
+set_exception_handler(function ($e) use ($logger) {
+  $logger->error($e, 'error');
+
+  if (env('APP_ENV', 'production') == 'production') {
+    echo <<<_
+      <html>
+        <p>Oops! an error occurred.</p>
+      </html>
+    _;
+  } else {
+    throw $e;
+  }
+});

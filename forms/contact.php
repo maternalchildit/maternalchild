@@ -4,8 +4,15 @@ use Validator\Validator;
 
 require '../setup.php';
 
-if (!$database_connection) {
-  $logger->log('Database connection error', 'database');
+// if (!$db->connect()) {
+//   $logger->error('Database connection error', 'database');
+//   echo_json(['error' => 'An error occurred. Please try again later.', 'ok' => false]);
+// }
+
+try {
+  $db->connect();
+} catch (\Throwable $th) {
+  $logger->error($th, 'error');
   echo_json(['error' => 'An error occurred. Please try again later.', 'ok' => false]);
 }
 
@@ -24,7 +31,6 @@ if (isset($_POST)) {
   if ($db->insertOne('contact', ['name' => $name, 'email' => $email, 'subject' => $subject, 'message' => $message, 'date' => date('Y-m-d H:i:s')])) {
     echo_json(['ok' => true]);
   } else {
-    $logger->log($db->getError(), 'database');
     echo_json(['error' => 'An error occurred. Please try again later.', 'ok' => false]);
   }
 }
