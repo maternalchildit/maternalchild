@@ -10,6 +10,7 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^5.3",
-        "nesbot/carbon": "^3.8"
+        "nesbot/carbon": "^3.8",
+        "guzzlehttp/guzzle": "^7.9"
     }
 }
