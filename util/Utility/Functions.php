@@ -9,8 +9,10 @@ class Functions
     return $_SERVER['DOCUMENT_ROOT'];
   }
 
-  static function extend($path)
+  static function extend($path, $vars = null)
   {
+    if ($vars)
+      extract($vars);
     return require Functions::give_root() . '/layouts/' . $path . '.php';
   }
 
@@ -31,8 +33,9 @@ class Functions
     return is_dir($_SERVER['DOCUMENT_ROOT'] . $dir);
   }
 
+
   static function mkdir($dir)
   {
-    return mkdir($_SERVER['DOCUMENT_ROOT'] . $dir);
+    return mkdir($_SERVER['DOCUMENT_ROOT'] . $dir, recursive: true);
   }
 }

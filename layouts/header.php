@@ -11,9 +11,20 @@ global $navbar, $cdn, $styles;
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Maternal-Child Specialists' Clinics</title>
+  <title><?php echo $title ?? "Maternal-Child Specialists' Clinics"; ?></title>
   <meta content="Maternal-Child Specialists' Clinics is a rapidly growing hospital in Ado-Ekiti, the capital city of Ekiti State, Southwest Nigeria with special interest in Comprehensive Maternity Care, Fetomaternal Medicine, Minimal Access Surgery, Advanced Fertility Management and General Gynaecology. We also offer specialised care in Paediatrics, Internal Medicine, General Surgery, Orthopaedics, Urology, Ophthalmology, Oral and Maxillofacial Surgery, Dental Surgery, Ear, Nose and Throat (ENT) Surgery, Laboratory Medicine, Pharmacy and other relevant fields of Medicine and Surgery." name="description">
   <meta content="antenatal care, pregnancy, hospitals in ado-ekiti, hospitals in ekiti, hospitals in nigeria, top hospitals in nigeria, nhis, health insurance" name="keywords">
+  <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
+  <meta property='og:type' content='website' />
+  <?php
+  if ($metaOg) {
+    foreach ($metaOg as $key => $value) {
+      echo <<<_
+        <meta property='og:$key' content='$value' />\n
+      _;
+    }
+  }
+  ?>
 
   <!-- Favicons -->
   <link href="/assets/img/favicon.ico" rel="icon">

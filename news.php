@@ -16,20 +16,26 @@ $showing_article = false;
 $id = @$_GET['id'];
 $id = $validator->validateInteger($id);
 
+$title = null;
+$metaOg = [];
+global $metaOg;
+
 if ($id) {
     $article = @$db->select("news_articles", null, "id = $id")[0];
     if (!$article) {
         header("Location: " . "/news.php");
         return;
     }
-    $article['title'] = strtoupper($article['title']);
+
+    $article['title'] = $metaOg['title'] = strtoupper($article['title']);
+    $metaOg['description'] = htmlspecialchars_decode($article['description']);
+    $metaOg['url'] = 'https://maternalchildhosp.net' . $_SERVER['REQUEST_URI'];
+    $metaOg['image'] = 'https://maternalchildhosp.net' . ($article['feature_picture'] ?? '/assets/img/favicon.ico');
+
     $article['created_at'] = date('Y-m-d h:i A', strtotime($article['created_at']));
     $articleText = file_get_contents(__DIR__  . $article['filepath']);
 
-    $articleText = str_replace('&lt;', '<', $articleText);
-    $articleText = str_replace('&gt;', '>', $articleText);
-    $articleText = str_replace('&amp;', '&', $articleText);
-    $articleText = str_replace('&quot;', '"', $articleText);
+    $articleText = htmlspecialchars_decode($articleText);
 
     $articleText = str_replace("\n", "<br/><br/>", $articleText);
     $showing_article = true;
@@ -42,7 +48,7 @@ if ($id) {
 $navbar = null;
 const TITLE = 'Home';
 $styles = ['news'];
-Functions::extend('header');
+Functions::extend('header', compact('title', 'metaOg'));
 ?>
 
 <main>

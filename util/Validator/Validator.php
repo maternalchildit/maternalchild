@@ -84,11 +84,12 @@ class Validator
     return false;
   }
 
-  function validateFile($file, float $megabytes = null)
+  function validateFile(&$file, float $megabytes = null)
   {
     $filename = $file['name'];
     $allowed_extensions = ['jpg', 'png', 'jpeg'];
     $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    $file['ext'] = ".$ext";
 
     if (in_array($ext, $allowed_extensions, true)) {
       if ($megabytes > 0) {

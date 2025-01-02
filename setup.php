@@ -48,11 +48,15 @@ function echo_json($obj)
 
 function dump($var)
 {
-  return (echo_json($var));
+  return (var_dump($var));
 }
 function dd($var)
 {
   die(echo_json($var));
+}
+
+function slug($str, $separator = "_") {
+  return preg_replace("/\s/", $separator, strtolower($str));
 }
 
 set_exception_handler(function ($e) use ($logger) {
