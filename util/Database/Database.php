@@ -65,7 +65,7 @@ class Database
     return true;
   }
 
-  function select(string $table, string $rows = null, string $where = null, int $limit = null, int $skip = 0)
+  function select(string $table, string $rows = null, string $where = null, int $limit = null, int $skip = 0, $order_by = null)
   {
     if ($this->tableExists($table)) {
       if (!$rows) {
@@ -75,9 +75,15 @@ class Database
       if ($where) {
         $sql .= "WHERE $where ";
       }
+
+      if ($order_by) {
+        $sql .= "ORDER BY $order_by ";
+      }
+
       if ($limit) {
         $sql .= "LIMIT $limit";
       }
+
       if ($skip) $sql .= " OFFSET $skip ";
 
       $query = $this->cxn->query($sql);

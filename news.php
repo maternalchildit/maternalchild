@@ -34,7 +34,7 @@ if ($id) {
     $showing_article = true;
 } else {
     $page = intval(@$_GET['page']) or 1;
-    $news = $db->select('news_articles', limit: 30, skip: max(($page - 1), 0) * 30);
+    $news = $db->select('news_articles', limit: 30, skip: max(($page - 1), 0) * 30, order_by: 'created_at desc');
 }
 
 
