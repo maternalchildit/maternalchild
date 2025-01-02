@@ -25,4 +25,14 @@ class Functions
     echo json_encode($obj);
     exit();
   }
+
+  static function checkDir($dir)
+  {
+    return is_dir($_SERVER['DOCUMENT_ROOT'] . $dir);
+  }
+
+  static function mkdir($dir)
+  {
+    return mkdir($_SERVER['DOCUMENT_ROOT'] . $dir);
+  }
 }

@@ -26,6 +26,10 @@ if ($id) {
     $article['created_at'] = date('Y-m-d h:i A', strtotime($article['created_at']));
     $articleText = file_get_contents(__DIR__  . $article['filepath']);
 
+    $articleText = str_replace('&lt;', '<', $articleText);
+    $articleText = str_replace('&gt;', '>', $articleText);
+    $articleText = str_replace('&amp;', '&', $articleText);
+
     $articleText = str_replace("\n", "<br/><br/>", $articleText);
     $showing_article = true;
 } else {
@@ -46,12 +50,11 @@ Functions::extend('header');
         include('ops/news-default.php');
     } else {
         echo <<<_
-            <div class='container pb-3'>
+            <div class='container pb-3 news-article'>
                 <a href="/news.php" class='pb-3'>< Back to news</a>
                 <h1>$article[title]</h1>
                 <p><i>Date: {$article['created_at']}</i></p>
-                $articleText
-
+                <div class='news-content py-3'>$articleText</div>
                 <a href="/news.php" class='py-3'>< Back to news</a>
             </div>
         _;

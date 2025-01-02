@@ -1,13 +1,15 @@
 .list {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+
 .list.divided li {
-	border-bottom: 1px solid;
+    border-bottom: 1px solid;
 }
+
 .list.divided li:last-of-type {
-	border-bottom: none;
+    border-bottom: none;
 }
 
 .list p {
@@ -19,4 +21,9 @@
     display: grid;
     grid-template-rows: auto;
     row-gap: 5px;
+}
+
+.news-content p {
+    margin: 0;
+    padding: 0;
 }

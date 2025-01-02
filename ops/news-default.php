@@ -5,8 +5,8 @@
     <ul class="list divided">
         <?php
         for ($i = 0; $i < count($news); $i++) {
-            $description = substr($news[$i]['description'], 0, 255);
-            $date = date('Y-m-d', strtotime($news[$i]['created_at']));
+            $description = substr($news[$i]['description'] ?? '', 0, 255);
+            $date = date('Y-m-d h:i A', strtotime($news[$i]['created_at']));
             echo <<<_
                 <li class='article-link py-4'>
                     <h3 class='p-0 m-0'><a href='/news.php?id={$news[$i]['id']}'>{$news[$i]['title']}</a></h3>
