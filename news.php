@@ -29,6 +29,7 @@ if ($id) {
     $articleText = str_replace('&lt;', '<', $articleText);
     $articleText = str_replace('&gt;', '>', $articleText);
     $articleText = str_replace('&amp;', '&', $articleText);
+    $articleText = str_replace('&quot;', '"', $articleText);
 
     $articleText = str_replace("\n", "<br/><br/>", $articleText);
     $showing_article = true;
