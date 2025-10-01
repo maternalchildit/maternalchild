@@ -43,7 +43,7 @@ class Database
       return true;
     }
 
-    $p = new PDO($_ENV['DATABASE_URL']);
+    $p = new PDO($_ENV['DATABASE_URL'], env('DATABASE_USER'), env('DATABASE_PASSWORD'));
 
     $this->cxn = $p;
 
@@ -65,7 +65,7 @@ class Database
     return true;
   }
 
-  function select(string $table, string $rows = null, string $where = null, int $limit = null, int $skip = 0, $order_by = null)
+  function select(string $table, ?string $rows = null, ?string $where = null, ?int $limit = null, ?int $skip = 0, ?string $order_by = null)
   {
     if ($this->tableExists($table)) {
       if (!$rows) {
